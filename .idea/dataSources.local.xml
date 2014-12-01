@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL" uuid="1bd25399-93f6-4cae-9276-284836fc1e2c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>mysql.*</schema-pattern>
+      <default-schemas>mysql.*</default-schemas>
+    </data-source>
+    <data-source name="H2 - my" uuid="2a9e40a1-0d97-4623-9758-fe122fe70136">
+      <secret-storage>master_key</secret-storage>
+      <schema-pattern>MY.PUBLIC</schema-pattern>
+      <default-schemas>MY.PUBLIC</default-schemas>
+    </data-source>
+  </component>
+</project>

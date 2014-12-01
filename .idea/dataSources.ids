@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL" uuid="1bd25399-93f6-4cae-9276-284836fc1e2c">
+    <database-info product="MySQL" version="5.5.23" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="mysql"/>
+    <table name="books" schema="" catalog="mysql" type="SYSTEM TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nameBook" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nameAuthor" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="slolko" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="unique_id" unique="true" columns="id"/>
+    </table>
+    <table name="dbuser" schema="" catalog="mysql" type="SYSTEM TABLE">
+      <column name="USER_ID" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12"/>
+      <column name="USERNAME" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CREATED_BY" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="CREATED_DATE" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="USER_ID"/>
+    </table>
+    <table name="users" schema="" catalog="mysql" type="SYSTEM TABLE">
+      <column name="id_user" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nameUser" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TelNum" sqlType="VARCHAR" precision="11" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id_user"/>
+      <index name="unique_id_user" unique="true" columns="id_user"/>
+    </table>
+  </data-source>
+  <data-source name="H2 - my" uuid="2a9e40a1-0d97-4623-9758-fe122fe70136">
+    <database-info product="H2" version="1.3.175 (2014-01-18)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.3.175 (2014-01-18)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="MY"/>
+    <table name="BOOK" schema="PUBLIC" catalog="MY" type="TABLE">
+      <column name="ID_BOOK" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfQjQ2RDQ3RjJfNEEyRV80MzdDXzk4OThfNjIxQjlFRTAwNDY2KQ==" autoIncrement="true"/>
+      <column name="NAMEBOOK" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAMEAUTHOR" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="KOL" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <index name="UNIQUE_ID_BOOK_INDEX_1" unique="true" columns="ID_BOOK"/>
+    </table>
+    <table name="DBUSER" schema="PUBLIC" catalog="MY" type="TABLE">
+      <column name="USER_ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="USERNAME" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TELNUMB" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12"/>
+      <column name="KOLORDER" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="CONSTRAINT_7" columns="USER_ID"/>
+    </table>
+    <table name="ORDERS" schema="PUBLIC" catalog="MY" type="TABLE">
+      <column name="USERNAME" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="TELNUMB" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="NAMEBOOK" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="BEGINTIME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ENDTIME" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+  </data-source>
+</component>
